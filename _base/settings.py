@@ -10,8 +10,13 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "rest_framework",
+    "django.contrib.sessions",  # needed for admin/auth
+    "django.contrib.messages",  # needed for admin
     "rest_framework.authtoken",
     "rest_framework_simplejwt",
+    "rest_framework",
+
+    "accounts",
 ]
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
@@ -152,3 +157,4 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_LIFETIME": timedelta(minutes=15),
     "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(days=7),
 }
+AUTH_USER_MODEL = "users.Member"
