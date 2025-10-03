@@ -9,15 +9,17 @@ INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+
     "rest_framework",
-    "django.contrib.sessions",  # needed for admin/auth
-    "django.contrib.messages",  # needed for admin
     "rest_framework.authtoken",
     "rest_framework_simplejwt",
-    "rest_framework",
 
     "accounts",
+    "orgs",
 ]
+
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 20,
