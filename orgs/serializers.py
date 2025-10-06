@@ -21,7 +21,7 @@ class OrganizationSerializer(serializers.ModelSerializer):
 class OrgMembershipSerializer(serializers.ModelSerializer):
     user = MemberSerializer(read_only=True)
     user_id = serializers.PrimaryKeyRelatedField(
-        queryset=type(MemberSerializer.Meta.model).objects.all(), source="user", write_only=True
+        queryset=MemberSerializer.Meta.model.objects.all(), source="user", write_only=True
     )
 
     class Meta:

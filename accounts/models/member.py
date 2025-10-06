@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.db import models
@@ -56,7 +57,7 @@ class Member(AbstractBaseUser, PermissionsMixin):
     two_factor_enabled = models.BooleanField(default=False)
     password_changed_at = models.DateTimeField(null=True, blank=True)
 
-    date_joined = models.DateTimeField(default=timezone.now)
+    date_joined = models.DateTimeField(auto_now_add=True)
     last_seen = models.DateTimeField(null=True, blank=True)
 
     projects_limit = models.PositiveIntegerField(null=True, blank=True)
