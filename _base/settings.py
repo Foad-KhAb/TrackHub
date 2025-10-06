@@ -18,6 +18,7 @@ INSTALLED_APPS = [
 
     "accounts",
     "orgs",
+    "projects",
 ]
 
 REST_FRAMEWORK = {
@@ -159,4 +160,4 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_LIFETIME": timedelta(minutes=15),
     "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(days=7),
 }
-AUTH_USER_MODEL = "users.Member"
+AUTH_USER_MODEL = "accounts.Member"
