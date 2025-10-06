@@ -36,3 +36,15 @@ class Comment(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     body = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
+
+class TimeEntry(models.Model):
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name="time_entries")
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    started_at = models.DateTimeField()
+    ended_at = models.DateTimeField()
+    note = models.CharField(max_length=255, blank=True)
+
+    @property
+    def duration_minutes(self):
+        delta = self.ended_at - self.started_at
+        return int(delta.total_seconds() // 60)
