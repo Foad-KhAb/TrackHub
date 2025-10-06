@@ -1,1 +1,18 @@
-djangorestframework_simplejwt==5.1.0
+# Core Django
+Django>=4.2,<5.0
+
+# REST framework and extensions
+djangorestframework>=3.15.0
+djangorestframework-simplejwt>=5.3.0
+django-filter>=23.5
+
+# Caching / Redis
+django-redis>=5.4.0
+hiredis>=2.3.0
+
+# Database driver for PostgreSQL
+psycopg2-binary>=2.9.9
+
+# Optional but recommended utilities
+python-dotenv>=1.0.1  # if you load .env variables
+Pillow>=10.0.0         # for ImageField uploads
