@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# Venvs
+.venv/
+venv/
+env/
+
+# Django
+/static/
+static/
+media/
+*.sqlite3
+
+# Git & IDE
+.git/
+.gitignore
+.idea/
+.vscode/
+*.log
+
+# Build artifacts
+dist/
+build/
+wheels/
+.wheels/
+*.egg-info/
