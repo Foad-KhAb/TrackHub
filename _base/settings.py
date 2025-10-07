@@ -77,9 +77,9 @@ ROOT_URLCONF = "_base.urls"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "TrackHub",
+        "NAME": "trackhub",
         "USER": "postgres",
-        "PASSWORD": "yourStrongPassword",
+        "PASSWORD": "postgres",
         "HOST": "localhost",
         "PORT": 5432,
     }
