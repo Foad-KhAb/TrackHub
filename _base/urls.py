@@ -10,6 +10,6 @@ urlpatterns = [
     #domain
     path("api/", include("orgs.urls")),
     path("api/", include("projects.urls")),
-    # path("api/", include("tasks.urls")),
-    # path("api/", include("reports.urls")),
+    path("api/", include("tasks.urls")),
+    path("api/", include("reports.urls")),
 ]

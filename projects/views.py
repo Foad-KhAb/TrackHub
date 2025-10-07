@@ -32,5 +32,4 @@ class ProjectViewSet(viewsets.ModelViewSet):
         if not email:
             return Response({"detail":"email required"}, status=400)
         inv = ProjectInvite.objects.create(project=project, email=email, token=secrets.token_urlsafe(32))
-        # (send email out-of-scope)
         return Response(ProjectInviteSerializer(inv).data, status=201)
